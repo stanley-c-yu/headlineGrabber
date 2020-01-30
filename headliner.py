@@ -29,7 +29,7 @@ print("\nTrending stories from Huntington News:")
 counter = 0
 for post in posts:
     counter += 1
-    if counter != 16:
+    if counter != 21:
         print(post.text)
     else:
         break
