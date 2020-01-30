@@ -33,3 +33,11 @@ for post in posts:
         print(post.text)
     else:
         break
+
+url = "https://www.sfgate.com/california-news/"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'lxml')
+posts = soup.find_all('a', class_="hdn-analytics ")
+print("\nNews from California:")
+for post in posts:
+    print(post.text)
